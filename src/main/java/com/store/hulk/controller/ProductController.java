@@ -41,7 +41,7 @@ public class ProductController {
 
     @ApiOperation(value = "Get product by id service", response = ResponseDTO.class)
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<ResponseDTO> getAgentByAgentCode(
+    public ResponseEntity<ResponseDTO> getAgentById(
             @PathVariable Integer id
     ) throws Exception {
         return productService.getById(id);

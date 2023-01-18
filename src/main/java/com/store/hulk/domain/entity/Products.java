@@ -28,7 +28,7 @@ public class Products {
     private Integer stock;
 
     @Column(name = "value")
-    private Float value;
+    private Double value;
 
     @Column(name = "image")
     private String image;
