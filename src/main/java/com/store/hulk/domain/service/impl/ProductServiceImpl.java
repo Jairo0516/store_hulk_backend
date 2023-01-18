@@ -53,7 +53,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ResponseEntity<ResponseDTO> update(ProductDTO productDTO, Integer id) {
+    public ResponseEntity<ResponseDTO> update(ProductDTO productDTO) {
         Products productSave = null;
         try {
             Products product = objectBuilder.map(productDTO, Products.class);

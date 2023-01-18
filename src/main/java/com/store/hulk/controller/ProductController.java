@@ -41,7 +41,7 @@ public class ProductController {
 
     @ApiOperation(value = "Get product by id service", response = ResponseDTO.class)
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<ResponseDTO> getAgentByAgentCode(
+    public ResponseEntity<ResponseDTO> getAgentById(
             @PathVariable Integer id
     ) throws Exception {
         return productService.getById(id);
@@ -51,10 +51,9 @@ public class ProductController {
     @ApiOperation(value = "Update product service by id", response = ResponseDTO.class)
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
     public ResponseEntity<ResponseDTO> update(
-            @PathVariable Integer id,
             @RequestBody @Valid ProductDTO productDTO
     ) throws Exception {
-        return productService.update(productDTO, id);
+        return productService.update(productDTO);
     }
 
 }
