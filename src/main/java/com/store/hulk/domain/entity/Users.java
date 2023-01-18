@@ -1,6 +1,5 @@
 package com.store.hulk.domain.entity;
 
-import com.store.hulk.domain.entity.key.ProductsKey;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,8 +8,8 @@ import lombok.*;
 @Builder(toBuilder = true)
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
-@Table(name = "products", schema = "schema_store")
-public class Products {
+@Table(name = "users", schema = "schema_store")
+public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,15 +19,15 @@ public class Products {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "last_name")
+    private String last_name;
 
-    @Column(name = "stock")
-    private Integer stock;
+    @Column(name = "phone")
+    private String phone;
 
-    @Column(name = "value")
-    private Double value;
+    @Column(name = "email")
+    private String email;
 
-    @Column(name = "image")
-    private String image;
+    @Column(name = "password")
+    private String password;
 }

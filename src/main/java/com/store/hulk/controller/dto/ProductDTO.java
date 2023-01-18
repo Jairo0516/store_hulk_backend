@@ -12,6 +12,9 @@ import lombok.*;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProductDTO {
 
+    @ApiModelProperty(notes = "id")
+    private Integer id;
+
     @NotNull
     @ApiModelProperty(notes = "name")
     private String name;

@@ -10,7 +10,7 @@ public interface ProductService {
 
     ResponseEntity create(ProductDTO productDTO) throws Exception;
 
-    ResponseEntity update(ProductDTO productDTO) throws Exception;
+    ResponseEntity update(ProductDTO productDTO, Integer id) throws Exception;
 
     ResponseEntity<ResponseCreateDTO> getAllByStock();
 
