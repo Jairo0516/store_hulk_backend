@@ -22,8 +22,8 @@ public class StatusDTO {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String detailMessageError;
 
-    public StatusDTO(String message) {
-        this.code = SUCCESS_CODE;
+    public StatusDTO(String message, String code) {
+        this.code = code;
         this.message = message;
         this.detailMessageError = null;
     }
