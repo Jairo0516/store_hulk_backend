@@ -1,6 +1,7 @@
 package com.store.hulk.controller.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.store.hulk.controller.dto.ProductDTO;
 import lombok.*;
 
 @Data
@@ -12,7 +13,6 @@ public class ResponseDTO {
 
     private StatusDTO status;
 
-    public static ResponseDTO apply(String message) {
-        return new ResponseDTO(new StatusDTO(message));
-    }
+    private ProductDTO product;
+
 }

@@ -49,9 +49,12 @@ public class ProductController {
 
 
     @ApiOperation(value = "Update product service by id", response = ResponseDTO.class)
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<ResponseDTO> update(@RequestBody @Valid ProductDTO productDTO) throws Exception {
-        return productService.update(productDTO);
+    @RequestMapping(value = "/update", method = RequestMethod.PUT)
+    public ResponseEntity<ResponseDTO> update(
+            @PathVariable Integer id,
+            @RequestBody @Valid ProductDTO productDTO
+    ) throws Exception {
+        return productService.update(productDTO, id);
     }
 
 }
